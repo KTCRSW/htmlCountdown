@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Hind:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Let's go 2025!!</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<center>
+
+    <pre data-prefix=">" class="text-success mt-[20%]"><h2>Welcome to 2025🎉</h2><code><p class="text-5xl		" id="demo">
+
+            </p></code>
+            </pre>
+</center>
+
+<script>
+    var countDate = new Date('Jan 1, 2025 0:00:00').getTime();
+    var x = setInterval(function () {
+        var dateNow = new Date().getTime();
+        var distance = countDate - dateNow;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hour = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minute = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("demo").innerHTML = days + "d " + hour + "h " + minute + "m " + seconds + "s ";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElemntById("demo").innerHTML = alert("Happy New Year!!!");
+        }
+    }, 1000)
+</script>
